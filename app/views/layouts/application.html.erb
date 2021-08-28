@@ -71,6 +71,9 @@
         </div>
       </nav>
     </header>
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
     <%= yield %>
     <footer>
       <p class="text-center py-3">CopyRight Infratop.inc</p>
